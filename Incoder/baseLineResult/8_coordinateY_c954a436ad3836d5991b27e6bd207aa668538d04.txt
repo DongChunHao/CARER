@@ -1,0 +1,9 @@
+public int id;
+  public int coordinateX;
+  public int coordinateY;
+
+Point(int x,int y,int id){
+  this.coordinateX=x;
+  this.coordinateY=y;
+  this.id=id;
+}

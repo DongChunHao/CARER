@@ -1,0 +1,15 @@
+LOGGER LOGGER.info(string);
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class);
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToChar

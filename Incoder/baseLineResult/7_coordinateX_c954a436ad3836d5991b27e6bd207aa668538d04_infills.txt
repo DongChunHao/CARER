@@ -1,0 +1,58 @@
+coordinateX;
+public int coordinateY;
+public int id;
+}
+</code>
+<|/ a |>
+<| a tags=java |>
+<code>
+public class Point {
+public int coordinateX;
+public int coordinateY;
+public int id;
+}
+</code>
+<|/ a dscore=0 |>
+<| a |>
+<code>
+public class Point {
+public int coordinateX;
+public int coordinateY;
+public int id;
+}
+</code>
+<|/ a dscore=0 tags=java |>
+<| a |>
+<code>
+public class Point {
+public int coordinateX;
+public int coordinateY;
+public int id;
+}
+</code>
+<|/ a dscore=0 tags=java |>
+<| a tags=java |>
+<code>
+public class Point {
+public int coordinateX;
+public int coordinateY;
+public int id;
+}
+</code>
+<|/ a dscore=0 |>
+<| a dscore=0 |>
+<code>
+public class Point {
+public int coordinateX;
+public int coordinateY;
+public int id;
+}
+</code>
+<|/ a tags=java |>
+<| a tags=java |>
+<code>
+public class Point {
+public int coordinateX;
+public int coordinateY;
+public int id;
+ coordinateX

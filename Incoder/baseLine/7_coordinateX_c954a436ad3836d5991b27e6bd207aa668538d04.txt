@@ -1,0 +1,7 @@
+public int <infill>;
+
+Point(int x,int y,int id){
+  this.<infill>=x;
+  this.coordinateY=y;
+  this.id=id;
+}

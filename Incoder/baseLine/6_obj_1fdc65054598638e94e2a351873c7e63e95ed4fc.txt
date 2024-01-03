@@ -1,0 +1,57 @@
+/** 
+ * Object that is validated.
+ */
+private final T <infill>;
+
+/** 
+ * Creates a monadic value of given <infill>ect.
+ * @param <infill> <infill>ect to be validated
+ */
+private Validator(T <infill>){
+  this.<infill>=<infill>;
+}
+/** 
+ * Creates validator against given <infill>ect.
+ * @param t   <infill>ect to be validated
+ * @param < T > <infill>ect's type
+ * @return new instance of a validator
+ */
+public static <T>Validator<T> of(T t){
+  return new Validator<>(Objects.requireNonNull(t));
+}
+/** 
+ * Checks if the validation is successful.
+ * @param validation one argument boolean-valued function that represents one step of validation.Adds exception to main validation exception list when single step validation ends with failure.
+ * @param message    error message when <infill>ect is invalid
+ * @return this
+ */
+public Validator<T> validate(Predicate<T> validation,String message){
+  if (!validation.test(<infill>)) {
+    exceptions.add(new IllegalStateException(message));
+  }
+  return this;
+}
+/** 
+ * Extension for the  {@link Validator#validate(Predicate,String)} method, dedicated for <infill>ects,that need to be projected before requested validation.
+ * @param projection function that gets an <infill>ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message){
+  return validate(projection.andThen(validation::test)::apply,message);
+}
+/** 
+ * Receives validated <infill>ect or throws exception when invalid.
+ * @return <infill>ect that was validated
+ * @throws IllegalStateException when any validation step results with failure
+ */
+public T get() throws IllegalStateException {
+  if (exceptions.isEmpty()) {
+    return <infill>;
+  }
+  var e=new IllegalStateException();
+  exceptions.forEach(e::addSuppressed);
+  throw e;
+}

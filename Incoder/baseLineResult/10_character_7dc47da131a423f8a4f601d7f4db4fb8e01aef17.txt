@@ -1,0 +1,8 @@
+private final char letter;
+
+public Letter(char c){
+  this.letter=c;
+}
+@Override protected void printThisBefore(){
+  System.out.print(letter);
+}

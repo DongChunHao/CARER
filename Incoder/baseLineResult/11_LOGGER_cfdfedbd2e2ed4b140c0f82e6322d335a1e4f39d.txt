@@ -1,0 +1,22 @@
+private static final Logger LOGGER=LoggerFactory.getLogger(ConvertToCharArrayHandler.class);
+
+@Override public char[] process(String input){
+  var characters=input.toCharArray();
+  var string=Arrays.toString(characters);
+  LOGGER.info(string);
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class);
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getSimpleName());
+  LOGGER.info("Current handler: "+ConvertToCharArrayHandler.class.getCanonicalName());
+  LOGGER.info("Current handler: "+ConvertToChar.info(String.format("Current handler: %s, input is %s of type %s, output is %s, of type %s",ConvertToCharArrayHandler.class,input,String.class,string,Character[].class));
+  return characters;
+}

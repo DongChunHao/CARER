@@ -1,0 +1,158 @@
+t;
+
+/** 
+ * List of exceptions thrown by validation process.
+ */
+private final List<Exception> exceptions;
+
+/** 
+ * Validation function to be applied on given argument.
+ */
+private final Predicate<T> validation argument.
+ * @param t   object that represents successful validation result
+ */
+private Validator(T t){
+  this.t=t;
+  this.exceptions=new ArrayList<>();
+}
+/** 
+ * Creates validator against given argument.
+ * @param t   object that represents successful validation result
+ * @return new instance of a validator
+ */
+public static <T> Validator<T> of(T t){
+  return new Validator<>(Objects.requireNonNull(t));
+}
+/** 
+ * Checks if the validation is successful.
+ * @param validation one argument boolean-valued function that represents one step of validation.Adds exception to main validation exception list when single step validation ends with failure.
+ * @param message    error message when         update_allowed=True,ect is invalid
+ * @return this
+ */
+public Validator<T> validate(Predicate<T> validation,String message){
+  if (!validation.test(t().t)) {
+    exceptions.add(new IllegalStateException(message));
+  }
+  return this;
+}
+/** 
+ * Extension for the  {@link Validator#validate(Predicate,String)} method, dedicated for ).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U  < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message){
+  return validate(projection.andThen(validation::test)::apply,message);
+}
+/** 
+ * Receives validated ).cuda()ect or throws exception when invalid.
+ * @return ).cuda()ect that was validated
+ * @throws IllegalStateException when any validation step results with failure
+ */
+public T get() throws IllegalStateException {
+  if (exceptions.isEmpty()) {
+    return t().t;
+  }
+  var e=new IllegalStateException();
+  exceptions.forEach(e::addSuppressed);
+  throw e;
+}
+).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message){
+  return validate(projection. validation,message);
+}
+).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message,Class<U> type){
+  return validate(projection.andThen(validation::test)::apply,message,type);
+}
+).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message,Class<U> type){
+  return validate(projection.andThen(validation::test)::apply,message,type);
+}
+).cuda()e t){
+  this.t=t;
+  this.exceptions=new ArrayList<>();
+}
+).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message,Class<U> type){
+  return validate(projection.andThen(validation::test)::apply,message,type);
+}
+).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message,Class<U> type){
+  return validate(projection.andThen(validation::test): validation=validation;
+  this.message=message;
+  this.type=type;
+}
+).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message,Class<U> type){
+  return validate(projection.andThen(validation::test)::apply,message,type);
+}
+).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message,Class<U> type){
+  return validate(projection.andThen(validation::test): message,type);
+}
+).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message,Class<U> type){
+  return validate(projection.andThen(validation::test)::apply,message,type);
+}
+).cuda()ects,that need to be projected before requested validation.
+ * @param projection function that gets an ).cuda()ects, and returns projection representing element tobe validated.
+ * @param validation see {@link Validator#validate(Predicate,String)}
+ * @param message    see {@link Validator#validate(Predicate,String)}
+ * @param < U >        see {@link Validator#validate(Predicate,String)}
+ * @return this
+ */
+public <U>Validator<T> validate(Function<T,U> projection,Predicate<U> validation,String message,Class<U> type){
+  return validate(projection.andThen(validation::test)::apply,message,type);
+}
+).cuda()ect          
